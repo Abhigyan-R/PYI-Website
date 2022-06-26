@@ -9,7 +9,6 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
         <link href="/dist/output.css" rel="stylesheet">
-        <link href="images/logo_nobg.png" rel="icon">
         <script src="https://cdn.tailwindcss.com"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -26,16 +25,16 @@
     <div class="toggle"></div>
     <h2>Contact Us</h2>
     <div class="scroll">
-    <form>
-      <input type="text" name="" placeholder="Name">
-      <input type="email" name="" placeholder="Email">
-      <input type="rel" name="" placeholder="Phone Number">
-      <select id="service_type" name="">
+    <form method="post" action="contact.php">
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="text" name="mobile" placeholder="Mobile No." required>
+      <input type="email" name="email" placeholder="e-Mail Address" required>
+      <select id="service" name="service">
       <option value="Automation">Automation Services</option>
       <option value="Software">Software Solutions</option>
       <option value="Drones">Drones</option>
       </select>
-      <textarea placeholder="Type you message here"></textarea>
+      <textarea rows="8" name="msg" placeholder="Message" required></textarea>
       <input type="submit" name="" value="Send">
     </form>
     </div>
@@ -216,7 +215,7 @@
                 <i class="fa fa-envelope-o"></i>
                 <span>
                     <h5>Email us your query</h5>
-                    <p>office@pyitechnologies.com</p>
+                    <p>pyitechnologies@gmail.com</p>
                 </span>
             </div>
         </div>
